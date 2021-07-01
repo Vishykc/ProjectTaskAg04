@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>MoneyHeistMember Management system</title>
+    </head>
+    <body>
+
+    <div align="center">
+    	<h1> HeistMembers list </h1>
+    	<table> 
+    		<thead>
+    			<tr> 
+    				<th> HeistMember name </th>
+    				<th> HeistMember sex </th>
+    				<th> HeistMember email </th>
+    				<th> skills </th>
+    				<th> mainSkill </th>
+    				<th> status </th>
+    			</tr>
+    		
+    		</thead>
+    		
+    		<tbody>
+    			<tr th:each="HeistMember : ${listHeistMembers}">
+    				<td th:text="${HeistMember.name}"></td>
+    				<td th:text="${HeistMember.sex}"></td>
+    				<td th:text="${HeistMember.email}"></td>
+    				<td th:text="${HeistMember.skills}"></td>
+    				<td th:text="${HeistMember.mainSkill}"></td>
+    				<td th:text="${HeistMember.status}"></td>
+    			
+    			</tr>
+    		
+    		</tbody>
+    	
+    	</table>
+     </div>  
+    </body>
+</html>
